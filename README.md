@@ -150,8 +150,34 @@ Reload the daemon to reread the service definition:
     
 Then restart the Gunicorn process:
 
-    sudo systemctl restart gunicorn
+    sudo systemctl restart webapp
     
+Similary for webapp1 and webapp2
+
+##### Deploying Celery in production:
+
+    sudo nano /etc/default/vectorceleryd
+    
+Add the below code and add the path of celery:
+
+Path of celery: `which celery`
+
+    CELERYD_NODES="worker1 worker2"
+
+    # The name of the Celery App, should be the same as the python file
+    # where the Celery tasks are defined
+    CELERY_APP="vector"
+
+    # Log and PID directories
+    CELERYD_LOG_FILE="/var/log/celery/%n%I.log"
+    CELERYD_PID_FILE="/var/run/celery/%n.pid"
+
+    # Log level
+    CELERYD_LOG_LEVEL=INFO
+
+    # Path to celery binary, that is in your virtual environment
+    CELERY_BIN={Path of celery}
+
 #### Configure Nginx to Proxy Pass: 
 
 Now that Gunicorn is set up, next you’ll configure Nginx to pass traffic to the process.
