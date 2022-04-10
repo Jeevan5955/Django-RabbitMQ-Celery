@@ -156,6 +156,8 @@ Similary for webapp1 and webapp2
 
 ##### Deploying Celery in production:
 
+Create celery environment file:
+
     sudo nano /etc/default/vectorceleryd
     
 Add the below code and add the path of celery:
@@ -178,8 +180,41 @@ Path of celery: `which celery`
     # Path to celery binary, that is in your virtual environment
     CELERY_BIN={Path of celery}
     
+Creating celery as service:
+ 
+    sudo nano /etc/systemd/system/vectorworker.service
     
-    sudo nano /etc/systemd/system/ameyoworker.service
+Add the below code and add the path of working directory:
+
+    [Unit]
+    Description=Celery Service
+    After=network.target
+
+    [Service]
+    Type=forking
+    User=root
+    EnvironmentFile=/etc/default/vectorceleryd
+    WorkingDirectory={path of working directory}
+    ExecStart=/bin/sh -c '${CELERY_BIN} multi start ${CELERYD_NODES} \
+      -A ${CELERY_APP} --pidfile=${CELERYD_PID_FILE} \
+      --logfile=${CELERYD_LOG_FILE} --loglevel=${CELERYD_LOG_LEVEL} ${CELERYD_OPTS}'
+    ExecStop=/bin/sh -c '${CELERY_BIN} multi stopwait ${CELERYD_NODES} \
+      --pidfile=${CELERYD_PID_FILE}'
+    ExecReload=/bin/sh -c '${CELERY_BIN} multi restart ${CELERYD_NODES} \
+      -A ${CELERY_APP} --pidfile=${CELERYD_PID_FILE} \
+      --logfile=${CELERYD_LOG_FILE} --loglevel=${CELERYD_LOG_LEVEL} ${CELERYD_OPTS}'
+
+    [Install]
+    WantedBy=multi-user.target
+    
+Reload the daemon to reread the service definition:
+
+    sudo systemctl daemon-reload
+    
+Then restart the Gunicorn process of celery worker:
+
+    sudo systemctl restart vectorworker
+
 
 #### Configure Nginx to Proxy Pass: 
 
