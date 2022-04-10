@@ -177,6 +177,9 @@ Path of celery: `which celery`
 
     # Path to celery binary, that is in your virtual environment
     CELERY_BIN={Path of celery}
+    
+    
+    sudo nano /etc/systemd/system/ameyoworker.service
 
 #### Configure Nginx to Proxy Pass: 
 
