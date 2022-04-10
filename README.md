@@ -93,8 +93,6 @@ Example:
 
 #### `celery -A vector worker -l info`
 
-#### Reference : https://www.designmycodes.com/python/use-celery-with-django.html
-
 
 ## Database Schema:
 
@@ -283,6 +281,10 @@ Nginx Deployment Documentation: [Nginx deployment documentation.pdf](https://git
 
 ![Vector Complete Arch drawio](https://user-images.githubusercontent.com/54932235/162632239-e90b1b50-e239-493d-9319-a2201260866e.png)
 
+#### Reference: 
+
+i) https://www.designmycodes.com/python/use-celery-with-django.html
+ii) https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04
 
 
 
