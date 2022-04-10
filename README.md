@@ -144,6 +144,18 @@ Path of gunicorn : `which gunicorn`
     [Install]
     WantedBy=multi-user.target
 
+Reload the daemon to reread the service definition:
+
+    sudo systemctl daemon-reload
+    
+Then restart the Gunicorn process:
+
+    sudo systemctl restart gunicorn
+    
+#### Configure Nginx to Proxy Pass: 
+
+[Nginx deployment documentation.pdf](https://github.com/Jeevan5955/Geographical-Vector/files/8459463/Nginx.deployment.documentation.pdf)
+
 
 
 
