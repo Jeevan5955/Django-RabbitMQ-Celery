@@ -111,9 +111,10 @@ Gunicorn is built so many different web servers can interact with it. It also do
 
 Gunicorn takes care of everything which happens in-between the web server and your web application. This way, when coding up your a Django application you don’t need to find your own solutions for:
 
-communicating with multiple web servers
-reacting to lots of web requests at once and distributing the load
-keepiung multiple processes of the web application running
+   a) communicating with multiple web servers
+   b) reacting to lots of web requests at once and distributing the load
+   c) keepiung multiple processes of the web application running
+
 
 
 
