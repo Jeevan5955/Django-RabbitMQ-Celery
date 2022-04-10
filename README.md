@@ -188,6 +188,23 @@ Add the below code and change the repective domain name:
                 #proxy_set_header   X-Forwarded-Proto https;
             }
     }
+    
+Next, create a symlink of this Nginx configuration in the sites-enabled folder by running the following command: 
+ 
+    sudo ln -s /etc/nginx/sites-available/vector /etc/nginx/sites-enabled
+ 
+Testing the configuration file: 
+
+    sudo nginx -t 
+    
+Next, reload your Nginx configurations by running the reload command: 
+
+    sudo service nginx reload
+    
+ #### HTTP to HTTPS using Certbot:
+ 
+     sudo apt-get install python3-certbot-nginx 
+     sudo certbot --nginx
 
 
 Nginx Deployment Documentation: [Nginx deployment documentation.pdf](https://github.com/Jeevan5955/Geographical-Vector/files/8459463/Nginx.deployment.documentation.pdf)
