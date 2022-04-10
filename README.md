@@ -1,11 +1,11 @@
 # Geographical-Vector
 
-### Framework: Django Rest Framework
-### Message Broker: RabbitMQ
-### Worker/Consumer: Celery
-### Database : MYSQL
-### Reverse Proxy: Nginx
-### WSGI application server : Gunicorn
+#### Framework: Django Rest Framework
+#### Message Broker: RabbitMQ
+#### Worker/Consumer: Celery
+#### Database : MYSQL
+#### Reverse Proxy: Nginx
+#### WSGI application server : Gunicorn
 
 ## Validation:
 
