@@ -216,7 +216,7 @@ Then restart the Gunicorn process of celery worker:
     sudo systemctl restart vectorworker
 
 
-#### Configure Nginx to Proxy Pass: 
+#### ii) Configure Nginx to Proxy Pass: 
 
 Now that Gunicorn is set up, next you’ll configure Nginx to pass traffic to the process.
 
@@ -269,13 +269,19 @@ Load Balancing Algorithm:
 
 Round Robin – Requests are distributed evenly across the servers, with server weights taken into consideration. This method is used by default.
     
- #### HTTP to HTTPS using Certbot:
+ #### iii) HTTP to HTTPS using Certbot:
  
      sudo apt-get install python3-certbot-nginx 
      sudo certbot --nginx
 
 
 Nginx Deployment Documentation: [Nginx deployment documentation.pdf](https://github.com/Jeevan5955/Geographical-Vector/files/8459463/Nginx.deployment.documentation.pdf)
+
+
+## Complete production architecture:
+
+
+![Vector Complete Arch drawio](https://user-images.githubusercontent.com/54932235/162632239-e90b1b50-e239-493d-9319-a2201260866e.png)
 
 
 
