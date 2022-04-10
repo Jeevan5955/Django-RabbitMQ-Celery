@@ -116,6 +116,12 @@ Gunicorn takes care of everything which happens in-between the web server and yo
    b) reacting to lots of web requests at once and distributing the load
    
    c) keepiung multiple processes of the web application running
+   
+#### Configuration of Gunicorn
+
+Create and open a systemd service file for Gunicorn with sudo privileges in your preferred text editor. The service filename should match the socket filename with the exception of the extension:
+
+`sudo nano /etc/systemd/system/webapp.service`
 
 
 
