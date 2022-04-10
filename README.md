@@ -201,6 +201,10 @@ Next, reload your Nginx configurations by running the reload command:
 
     sudo service nginx reload
     
+Load Balancing Algorithm:
+
+Round Robin – Requests are distributed evenly across the servers, with server weights taken into consideration. This method is used by default.
+    
  #### HTTP to HTTPS using Certbot:
  
      sudo apt-get install python3-certbot-nginx 
