@@ -94,3 +94,12 @@ Example:
 #### `celery -A vector worker -l info`
 
 #### Reference : https://www.designmycodes.com/python/use-celery-with-django.html
+
+
+## Database Schema:
+
+![Vector scheme](https://user-images.githubusercontent.com/54932235/162629045-28414b9b-20bd-420a-b75f-3c8d0461fc13.png)
+
+
+
+
