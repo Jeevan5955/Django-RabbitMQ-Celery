@@ -2,8 +2,8 @@
 
 ## Validation:
 
-Object-level validation
-Sometimes you'll have to compare fields with one another in order to validate them. This is when you should use the object-level validation approach.
+Object-level validation :
+In our case we have to compare fields with one another in order to validate them. This is when you should use the object-level validation approach.
 
 Example:
 
