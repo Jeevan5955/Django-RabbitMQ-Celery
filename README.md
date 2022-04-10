@@ -9,6 +9,13 @@
 
 ## Validation:
 
+The validation that is used in the Django application is Object-level validation. 
+
+DRF enforces data validation in the deserialization process, which is why you need to call is_valid() before accessing the validated data. If the data is invalid, errors are then appended to the serializer's error property and a ValidationError is thrown.
+
+Only if the data during post or update is valid then it is put in a queue from which celery worker will pickup the task and save it to the database.
+
+
 Object-level validation :
 
 In our case we have to compare fields with one another in order to validate them. This is when you should use the object-level validation approach.
