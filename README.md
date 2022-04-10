@@ -284,7 +284,10 @@ Nginx Deployment Documentation: [Nginx deployment documentation.pdf](https://git
 #### Reference: 
 
 i) https://www.designmycodes.com/python/use-celery-with-django.html
+
 ii) https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04
+
+iii) https://www.nginx.com/resources/wiki/start/topics/examples/loadbalanceexample/
 
 
 
