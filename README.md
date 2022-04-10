@@ -101,5 +101,20 @@ Example:
 ![Vector scheme](https://user-images.githubusercontent.com/54932235/162629045-28414b9b-20bd-420a-b75f-3c8d0461fc13.png)
 
 
+## Deployment :
+
+### i) WSGI application server - Gunicorn:
+
+Gunicorn is a WSGI server
+
+Gunicorn is built so many different web servers can interact with it. It also does not really care what you used to build your web application - as long as it can be interacted with using the WSGI interface.
+
+Gunicorn takes care of everything which happens in-between the web server and your web application. This way, when coding up your a Django application you don’t need to find your own solutions for:
+
+communicating with multiple web servers
+reacting to lots of web requests at once and distributing the load
+keepiung multiple processes of the web application running
+
+
 
 
