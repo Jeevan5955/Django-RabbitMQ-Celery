@@ -1,5 +1,26 @@
 # Geographical-Vector
 
+## Validation:
+
+Object-level validation
+Sometimes you'll have to compare fields with one another in order to validate them. This is when you should use the object-level validation approach.
+
+Example:
+
+from rest_framework import serializers
+from examples.models import Movie
+
+
+class MovieSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Movie
+        fields = '__all__'
+
+    def validate(self, data):
+        if data['us_gross'] > data['worldwide_gross']:
+            raise serializers.ValidationError('worldwide_gross cannot be bigger than us_gross')
+        return data
+
 ## Installation:
 
 ### Recommendation:
