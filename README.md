@@ -123,6 +123,12 @@ Create and open a systemd service file for Gunicorn with sudo privileges in your
 
 `sudo nano /etc/systemd/system/webapp.service`
 
+Add the below code and change the respective like service name,path of application and path of gunicorn
+
+Path of application : `pwd`
+
+Path of gunicorn : `which gunicorn`
+
 
 
 
