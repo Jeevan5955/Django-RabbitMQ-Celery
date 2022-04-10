@@ -22,7 +22,7 @@
 
 ##### ii) Database Configuration
 ###### a) Create a SQL database
-###### Reference: https://www.postgresql.org/
+###### Reference: https://dev.mysql.com/
 ###### b) Open setting.py 
 ###### Path: vector/filled/setting.py
 ###### b) Add SQL database details
