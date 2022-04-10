@@ -129,6 +129,20 @@ Path of application : `pwd`
 
 Path of gunicorn : `which gunicorn`
 
+    [Unit]
+    Description=webapp daemon
+    After=network.target
+
+    [Service]
+    PIDFile=/var/run/webapp.pid
+    WorkingDirectory={path of Django application}
+    ExecStart={path of gunicorn} --config {path of Django application}/webapp.py --pid /var/run/webapp.pid vector.wsgi:application
+    ExecReload=/bin/kill -s HUP $MAINPID
+    ExecStop=/bin/kill -s TERM $MAINPID
+    PrivateTmp=true
+
+    [Install]
+    WantedBy=multi-user.target
 
 
 
