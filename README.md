@@ -6,6 +6,7 @@
 #### Database : MYSQL
 #### Reverse Proxy: Nginx
 #### WSGI application server : Gunicorn
+#### Postman Collection: https://www.getpostman.com/collections/ff90e94c43b8728cff30
 
 ## Validation:
 
